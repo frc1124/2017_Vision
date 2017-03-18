@@ -26,6 +26,20 @@ while(1):
 
     cv2.drawContours(frame,search,-1,(0,255,0),3)
 
+    @staticmethod
+    def getCenterX(cap):
+        minX = -1
+        maxX = -1
+        while i < len(search):
+            x,y,w,h = cv2.boundingRect(search[i])
+        if(minX == -1 or minX > x)
+            minX = x
+        if(maxX == -1 or maxX < x)
+            maxX = x
+        if(minX == -1):
+            return -1;
+        return (minX + maxX) / 2
+    
     cv2.imshow('result',frame)
     k = cv2.waitKey(5) & 0xFF
     if k == 27:
